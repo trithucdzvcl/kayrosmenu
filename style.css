@@ -1,0 +1,103 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1d1b1b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  border: 4px solid red;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  background-color: #2b2a2a;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: yellow;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: red;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.line {
+  margin: 10px 0;
+  height: 2px;
+  background: linear-gradient(to right, red, blue);
+  border: none;
+}
+
+.socials {
+  margin: 10px 0;
+}
+
+.zalo, .tiktok {
+  background: linear-gradient(to right, violet, green, yellow);
+  border: none;
+  padding: 8px 16px;
+  margin: 4px;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+}
+
+.note {
+  font-size: 12px;
+  color: yellow;
+}
