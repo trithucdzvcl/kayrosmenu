@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MENU IOS-ADR BY KAYROS</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    @keyframes rainbowText {
+      0% { color: red; }
+      20% { color: orange; }
+      40% { color: yellow; }
+      60% { color: green; }
+      80% { color: blue; }
+      100% { color: violet; }
+    }
+
+    @keyframes rainbowBorder {
+      0% { border-image-source: linear-gradient(0deg, red, orange, yellow, green, blue, indigo, violet); }
+      25% { border-image-source: linear-gradient(90deg, violet, red, orange, yellow, green, blue, indigo); }
+      50% { border-image-source: linear-gradient(180deg, indigo, violet, red, orange, yellow, green, blue); }
+      75% { border-image-source: linear-gradient(270deg, blue, indigo, violet, red, orange, yellow, green); }
+      100% { border-image-source: linear-gradient(360deg, red, orange, yellow, green, blue, indigo, violet); }
+    }
+
+    .menu-container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 6px solid;
+      border-radius: 25px;
+      background-color: #111;
+      border-image-slice: 1;
+      animation: rainbowBorder 15s infinite linear;
+      border-image-source: linear-gradient(0deg, red, orange, yellow, green, blue, indigo, violet);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowText 3s infinite alternate;
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 10px yellow; }
+      to { text-shadow: 0 0 25px lime; }
+    }
+
+    .option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #444;
+      font-size: 16px;
+      font-weight: 600;
+      animation: rainbowText 6s infinite linear;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 45px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #444;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    .switch input:checked + .slider {
+      background: linear-gradient(to right, #00ffcc, #33ff00);
+    }
+
+    .switch input:checked + .slider:before {
+      transform: translateX(21px);
+    }
+
+    .links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn {
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      background: linear-gradient(90deg, red, yellow, green, cyan, blue, violet);
+      color: black;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      transition: transform 0.2s ease-in-out;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      background: linear-gradient(to right, red, yellow, green, cyan, blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    #status {
+      text-align: center;
+      font-size: 14px;
+      color: #00ff99;
+      font-weight: bold;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h2>MENU IOS-ADR BY KAYROS</h2>
+
+    <div class="option"><span>AIMBOT</span><label class="switch"><input type="checkbox" onchange="checkAllEnabled()"><span class="slider"></span></label></div>
+    <div class="option"><span>AIMLOCK</span><label class="switch"><input type="checkbox" onchange="checkAllEnabled()"><span class="slider"></span></label></div>
+    <div class="option"><span>KHÓA CỔ </span><label class="switch"><input type="checkbox" onchange="checkAllEnabled()"><span class="slider"></span></label></div>
+    <div class="option"><span>TĂNG 250HPS</span><label class="switch"><input type="checkbox" onchange="checkAllEnabled()"><span class="slider"></span></label></div>
+    <div class="option"><span>TRICK HEAD</span><label class="switch"><input type="checkbox" onchange="checkAllEnabled()"><span class="slider"></span></label></div>
+    <div class="option"><span>FIX RUNG</span><label class="switch"><input type="checkbox" onchange="checkAllEnabled()"><span class="slider"></span></label></div>
+    <div class="option"><span>DPI TRICK V3</span><label class="switch"><input type="checkbox" onchange="checkAllEnabled()"><span class="slider"></span></label></div>
+
+    <div class="links">
+      <a href="https://zalo.me/0852446848" class="btn" target="_blank">Zalo</a>
+      <a href="https://www.tiktok.com/@kayroscheats?_t=ZS-8y3jsDA8D0U&_r=" class="btn" target="_blank">TikTok</a>
+    </div>
+
+    <div class="footer">
+Muốn Múc Bản Này Thì Ibox Giá Học Sinh⚙️
+    </div>
+
+    <div id="status">Đã Bật Xong Toàn Bộ Chức Năng Và Đang Chạy Script Ẩn Vào Máy...!🧩</div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+  <script src="aimlock.js"></script>
+  <script src="config.js"></script>
+  <script src="aim.js"></script>
+  <script src="head.js"></script>
+  <script src="lockconfig.js"></script>
+  <script src="lockhead.js"></script>
+  <script src="shotlock.js"></script>
+  <script src="headlock.js"></script>
+
+  <script>
+    function checkAllEnabled() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+      const status = document.getElementById('status');
+      status.style.display = allChecked ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
